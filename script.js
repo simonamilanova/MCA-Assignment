@@ -18,7 +18,9 @@ let receiptApp = {
             }).then(function (data) {
                 receiptApp.getDomesticProductsBase(data);
                 receiptApp.getImportedProductsBase(data);
-            })
+            }) .catch(function (error) {
+                console.error("Something went wrong");
+            });
     },
 
     getDomesticProductsBase: function(products){
