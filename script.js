@@ -1,7 +1,7 @@
 let receiptApp = {
     domesticProducts: document.getElementById("domesticProducts"),
     importedProducts: document.getElementById("importedProducts"),
-    baseUrl: "https://interview-task-api.mca.dev/qr-scanner-codes/alpha-qr-gFpwhsQ8fkY1", //"https://raw.githubusercontent.com/simonamilanova/MCA-Assignment/main/data.json",
+    baseUrl: "https://raw.githubusercontent.com/simonamilanova/MCA-Assignment/main/data.json",
     domesticCost: document.getElementById("domesticCost"),
     importedCost: document.getElementById("importedCost"),
     domesticCount: document.getElementById("domesticCount"),
