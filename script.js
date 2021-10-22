@@ -1,7 +1,7 @@
 let receiptApp = {
     domesticProducts: document.getElementById("domesticProducts"),
     importedProducts: document.getElementById("importedProducts"),
-    baseUrl: "https://raw.githubusercontent.com/simonamilanova/MCA-Assignment/main/data.json",
+    baseUrl: "https://interview-task-api.mca.dev/qr-scanner-codes/alpha-qr-gFpwhsQ8fkY1", //"https://raw.githubusercontent.com/simonamilanova/MCA-Assignment/main/data.json",
     domesticCost: document.getElementById("domesticCost"),
     importedCost: document.getElementById("importedCost"),
     domesticCount: document.getElementById("domesticCount"),
@@ -31,7 +31,7 @@ let receiptApp = {
         if(products[i].domestic === true){
             products.sort((a, b) => a.name.localeCompare(b.name));
             countDomesticProducts++;
-            domesticProducts.innerHTML += 
+            this.domesticProducts.innerHTML += 
             `
             <span>. . . ${products[i].name}</span> <br>
             <span>&nbsp&nbsp&nbsp&nbsp&nbsp Price: $${products[i].price}</span> <br>
@@ -44,8 +44,8 @@ let receiptApp = {
 
         }
 
-        domesticCost.innerText = `$${sumOfDomesticCost},0`;
-        domesticCount.innerText = `${countDomesticProducts}`; 
+        this.domesticCost.innerText = `$${sumOfDomesticCost},0`;
+        this.domesticCount.innerText = `${countDomesticProducts}`; 
 
     },
 
@@ -55,7 +55,7 @@ let receiptApp = {
         for (let i = 0; i < products.length; i++) {
             if(products[i].domestic === false){
                 countImportedProducts++;
-                importedProducts.innerHTML += 
+                this.importedProducts.innerHTML += 
                 `
                 <span>. . . ${products[i].name}</span> <br>
                 <span>&nbsp&nbsp&nbsp&nbsp&nbsp Price: $${products[i].price}.0</span> <br>
@@ -67,8 +67,8 @@ let receiptApp = {
             }
         }
     
-        importedCost.innerText = `$${sumOfImportedCost},0`;
-        importedCount.innerText = `${countImportedProducts}`;
+        this.importedCost.innerText = `$${sumOfImportedCost},0`;
+        this.importedCount.innerText = `${countImportedProducts}`;
     }
 }
 
